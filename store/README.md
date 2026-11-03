@@ -10,7 +10,9 @@ Material para la ficha de la Chrome Web Store. Esta carpeta no se incluye en el 
 | `screenshot-3-semver.png` | Captura 3 (1280×800) |
 | `promo-small-440x280.png` | Mosaico promocional pequeño (440×280) |
 | `promo-marquee-1400x560.png` | Mosaico de marquesina (1400×560, opcional) |
-| `logo.svg`, `logo-512.png` | Logo en vector y en alta resolución, para el README u otros usos |
+| `logo.svg`, `logo-dark.svg`, `logo-512.png` | Logo en vector (fondo verde y fondo azul) y en alta resolución |
+
+El diseño usa la marca de Elikar Systems: verde `#67BE28`, azul `#002150`, verde profundo `#2F7A0C`, Sora para títulos, DM Sans para texto y JetBrains Mono para etiquetas. Nunca texto blanco sobre el verde.
 
 Las capturas muestran la extensión real sobre una página de demostración, no un repositorio real. Los HTML para regenerarlas están en `source/`: ábrelos en el navegador con una ventana de 1280×800 (o 440×280 y 1400×560) y haz la captura.
 
