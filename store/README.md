@@ -4,12 +4,15 @@ Material para la ficha de la Chrome Web Store. Esta carpeta no se incluye en el 
 
 | Archivo | Uso en la ficha |
 |---|---|
-| `../extension/icons/icon-128.png` | Icono de la tienda (128×128) |
-| `screenshot-invalid.png` | Captura 1 (1280×800) |
-| `screenshot-valid.png` | Captura 2 (1280×800) |
+| `../extension/icons/icon-128.png` | Ícono de la tienda (128×128) |
+| `screenshot-1-revisa.png` | Captura 1 (1280×800) |
+| `screenshot-2-corrige.png` | Captura 2 (1280×800) |
+| `screenshot-3-semver.png` | Captura 3 (1280×800) |
 | `promo-small-440x280.png` | Mosaico promocional pequeño (440×280) |
+| `promo-marquee-1400x560.png` | Mosaico de marquesina (1400×560, opcional) |
+| `logo.svg`, `logo-512.png` | Logo en vector y en alta resolución, para el README u otros usos |
 
-Las capturas usan una página de demostración, no un repositorio real.
+Las capturas muestran la extensión real sobre una página de demostración, no un repositorio real. Los HTML para regenerarlas están en `source/`: ábrelos en el navegador con una ventana de 1280×800 (o 440×280 y 1400×560) y haz la captura.
 
 ## Pasos
 
