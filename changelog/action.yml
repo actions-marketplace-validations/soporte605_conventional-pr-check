@@ -1,5 +1,5 @@
 name: 'Conventional PR Changelog'
-description: 'Genera el changelog desde el último release a partir de los títulos de PR con Conventional Commits y calcula la siguiente versión.'
+description: 'Generate release notes from Conventional Commits PR titles since the last tag and compute the next SemVer version.'
 author: 'Elikar Systems'
 branding:
   icon: 'book-open'

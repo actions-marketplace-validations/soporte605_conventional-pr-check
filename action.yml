@@ -1,5 +1,5 @@
 name: 'Conventional PR Check'
-description: 'Valida que el título del PR siga Conventional Commits, sugiere un título corregido y reporta el próximo bump SemVer.'
+description: 'Lint PR titles with Conventional Commits, suggest a fixed title from labels and report the next SemVer bump.'
 author: 'Elikar Systems'
 branding:
   icon: 'check-circle'
