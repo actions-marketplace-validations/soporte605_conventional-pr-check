@@ -9,7 +9,7 @@ GitHub Action que valida que el título de cada pull request siga [Conventional 
 - Deduce el tipo sugerido a partir de las etiquetas del PR (`bug` → `fix`, `enhancement` → `feat`, ...), de prefijos mal escritos (`Feature:`, `[FIX]`, `bugfix -`) o de palabras clave (`Add ...`, `Fix ...`).
 - Expone el próximo bump SemVer: `major`, `minor`, `patch` o `none`.
 - Incluye una segunda Action, [`changelog`](#changelog), que arma las notas de versión desde el último release y calcula la siguiente versión.
-- Incluye una [extensión para el navegador](#extensión-para-el-navegador) que muestra el título sugerido en la página del PR y lo aplica con un clic.
+- Incluye una [extensión para el navegador](#extensión-para-el-navegador) que muestra el título sugerido en la página del PR y lo aplica con un clic, disponible en la [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa).
 - Sin dependencias: JavaScript plano que corre en el runtime `node24` de Actions.
 
 ## Uso
@@ -170,9 +170,9 @@ La carpeta [`extension/`](extension) es una extensión para Chrome, Edge y otros
 
 ### Instalación
 
-1. Descarga `conventional-pr-check-extension.zip` del [último release](https://github.com/soporte605/conventional-pr-check/releases/latest) y descomprímelo.
-2. Abre `chrome://extensions` (o `edge://extensions`), activa el **Modo de desarrollador** y elige **Cargar descomprimida** con la carpeta.
-3. En las opciones de la extensión, pega un token de GitHub.
+Instálala desde la [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa). También funciona en Edge, Brave y otros navegadores basados en Chromium. Después, en las opciones de la extensión, pega un token de GitHub.
+
+Para instalarla a mano, descarga `conventional-pr-check-extension.zip` del [último release](https://github.com/soporte605/conventional-pr-check/releases/latest), descomprímelo, abre `chrome://extensions` (o `edge://extensions`), activa el **Modo de desarrollador** y elige **Cargar descomprimida** con la carpeta.
 
 El token es necesario para aplicar el título y para ver repositorios privados. Usa un [token detallado (fine-grained)](https://github.com/settings/personal-access-tokens/new) con permiso **Pull requests: Read and write** solo en los repositorios donde lo vas a usar. Se guarda únicamente en ese navegador. Sin token, el panel funciona en repositorios públicos y el botón Copiar sigue disponible.
 

@@ -9,7 +9,7 @@ GitHub Action that checks that every pull request title follows [Conventional Co
 - Infers the suggested type from the PR labels (`bug` → `fix`, `enhancement` → `feat`, ...), from misspelled prefixes (`Feature:`, `[FIX]`, `bugfix -`) or from keywords (`Add ...`, `Fix ...`).
 - Outputs the next SemVer bump: `major`, `minor`, `patch` or `none`.
 - Ships a second Action, [`changelog`](#changelog), that builds release notes since the last release and computes the next version.
-- Ships a [browser extension](#browser-extension) that shows the suggested title on the PR page and applies it with one click.
+- Ships a [browser extension](#browser-extension) that shows the suggested title on the PR page and applies it with one click, available in the [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa).
 - No dependencies: plain JavaScript running on the Actions `node24` runtime.
 
 Messages, PR comments, generated release notes and the extension UI are in Spanish.
@@ -172,9 +172,9 @@ The [`extension/`](extension) folder is an extension for Chrome, Edge and other 
 
 ### Installation
 
-1. Download `conventional-pr-check-extension.zip` from the [latest release](https://github.com/soporte605/conventional-pr-check/releases/latest) and unzip it.
-2. Open `chrome://extensions` (or `edge://extensions`), turn on **Developer mode** and choose **Load unpacked** with the folder.
-3. In the extension options, paste a GitHub token.
+Install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa). It also works in Edge, Brave and other Chromium-based browsers. Then, in the extension options, paste a GitHub token.
+
+To install it by hand instead, download `conventional-pr-check-extension.zip` from the [latest release](https://github.com/soporte605/conventional-pr-check/releases/latest), unzip it, open `chrome://extensions` (or `edge://extensions`), turn on **Developer mode** and choose **Load unpacked** with the folder.
 
 The token is needed to apply the title and to see private repositories. Use a [fine-grained token](https://github.com/settings/personal-access-tokens/new) with **Pull requests: Read and write** permission only on the repositories where you will use it. It is stored only in that browser. Without a token, the panel works on public repositories and the Copy button is still available.
 
