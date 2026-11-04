@@ -1,7 +1,24 @@
 {
   "name": "conventional-pr-check",
   "version": "0.2.0",
-  "description": "GitHub Action que valida títulos de PR con Conventional Commits y reporta el próximo bump SemVer.",
+  "description": "GitHub Action and Chrome extension that lint pull request titles with Conventional Commits, suggest fixes and compute the next SemVer bump.",
+  "keywords": [
+    "github-action",
+    "conventional-commits",
+    "pull-request",
+    "pr-title",
+    "semver",
+    "changelog",
+    "release-notes",
+    "commitlint",
+    "chrome-extension"
+  ],
+  "homepage": "https://github.com/soporte605/conventional-pr-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soporte605/conventional-pr-check.git"
+  },
+  "author": "Elikar Systems",
   "main": "src/index.js",
   "private": true,
   "scripts": {
