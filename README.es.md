@@ -1,6 +1,27 @@
-# Conventional PR Check
+<p align="center">
+  <img src="store/logo.svg" width="96" height="96" alt="Logo de Conventional PR Check">
+</p>
 
-[English](README.md) | **Español**
+<h1 align="center">Conventional PR Check</h1>
+
+<p align="center">
+  <b>Valida el título de tus pull requests con Conventional Commits, recibe un título corregido automáticamente y conoce el próximo bump SemVer.</b><br>
+  GitHub Action + generador de changelog + extensión para Chrome.
+</p>
+
+<p align="center">
+  <a href="https://github.com/marketplace/actions/conventional-pr-check"><img alt="GitHub Marketplace" src="https://img.shields.io/badge/Marketplace-Conventional%20PR%20Check-2F7A0C?logo=github&logoColor=white"></a>
+  <a href="https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa"><img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/fmkhkinikgklddbiegghiinkjoligdfa?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white&color=002150"></a>
+  <a href="https://github.com/soporte605/conventional-pr-check/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/soporte605/conventional-pr-check/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/soporte605/conventional-pr-check/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/soporte605/conventional-pr-check?color=67BE28"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-475569"></a>
+</p>
+
+<p align="center"><a href="README.md">English</a> | <b>Español</b></p>
+
+<p align="center">
+  <img src="store/screenshot-2-corrige.png" width="720" alt="La extensión sugiere un título válido de Conventional Commits para un pull request">
+</p>
 
 GitHub Action que valida que el título de cada pull request siga [Conventional Commits](https://www.conventionalcommits.org/es/v1.0.0/), sugiere un título corregido cuando no lo hace y reporta el próximo bump de [SemVer](https://semver.org/lang/es/).
 
@@ -9,7 +30,7 @@ GitHub Action que valida que el título de cada pull request siga [Conventional 
 - Deduce el tipo sugerido a partir de las etiquetas del PR (`bug` → `fix`, `enhancement` → `feat`, ...), de prefijos mal escritos (`Feature:`, `[FIX]`, `bugfix -`) o de palabras clave (`Add ...`, `Fix ...`).
 - Expone el próximo bump SemVer: `major`, `minor`, `patch` o `none`.
 - Incluye una segunda Action, [`changelog`](#changelog), que arma las notas de versión desde el último release y calcula la siguiente versión.
-- Incluye una [extensión para el navegador](#extensión-para-el-navegador) que muestra el título sugerido en la página del PR y lo aplica con un clic.
+- Incluye una [extensión para el navegador](#extensión-para-el-navegador) que muestra el título sugerido en la página del PR y lo aplica con un clic, disponible en la [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa).
 - Sin dependencias: JavaScript plano que corre en el runtime `node24` de Actions.
 
 ## Uso
@@ -168,11 +189,13 @@ La carpeta [`extension/`](extension) es una extensión para Chrome, Edge y otros
 - Si el título es válido, indica el próximo bump SemVer.
 - Si no lo es, muestra los errores y un título sugerido (con la misma lógica de la Action, incluidas las etiquetas del PR), que se puede editar, copiar o **aplicar con un clic**.
 
+<p align="center"><img src="store/screenshot-1-revisa.png" width="640" alt="Panel de la extensión en la página de un pull request"></p>
+
 ### Instalación
 
-1. Descarga `conventional-pr-check-extension.zip` del [último release](https://github.com/soporte605/conventional-pr-check/releases/latest) y descomprímelo.
-2. Abre `chrome://extensions` (o `edge://extensions`), activa el **Modo de desarrollador** y elige **Cargar descomprimida** con la carpeta.
-3. En las opciones de la extensión, pega un token de GitHub.
+Instálala desde la [Chrome Web Store](https://chromewebstore.google.com/detail/fmkhkinikgklddbiegghiinkjoligdfa). También funciona en Edge, Brave y otros navegadores basados en Chromium. Después, en las opciones de la extensión, pega un token de GitHub.
+
+Para instalarla a mano, descarga `conventional-pr-check-extension.zip` del [último release](https://github.com/soporte605/conventional-pr-check/releases/latest), descomprímelo, abre `chrome://extensions` (o `edge://extensions`), activa el **Modo de desarrollador** y elige **Cargar descomprimida** con la carpeta.
 
 El token es necesario para aplicar el título y para ver repositorios privados. Usa un [token detallado (fine-grained)](https://github.com/settings/personal-access-tokens/new) con permiso **Pull requests: Read and write** solo en los repositorios donde lo vas a usar. Se guarda únicamente en ese navegador. Sin token, el panel funciona en repositorios públicos y el botón Copiar sigue disponible.
 
@@ -196,3 +219,7 @@ La extensión no recopila datos. Ver [PRIVACY.md](PRIVACY.md).
 ## Licencia
 
 MIT
+
+---
+
+<p align="center">Hecho por <a href="https://elikarsystems.com"><b>Elikar Systems</b></a></p>
